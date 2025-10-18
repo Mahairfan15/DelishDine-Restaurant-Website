@@ -1,0 +1,203 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* HERO SECTION */
+.mainres {
+  height: 100vh;
+  width: 100%;
+  background: url("../IMAGES/spring-roll-6760871_1280.jpg") center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.mainres::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.restaurant {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.restaurant h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
+}
+
+/* BUTTONS BELOW TITLE */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.buttons .btn {
+  font-size: 1.1rem;
+  padding: 10px 25px;
+  border-radius: 50px;
+  border: 2px solid #17a2b8;
+  color: #17a2b8;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.buttons .btn:hover {
+  background-color: #17a2b8;
+  color: white;
+  box-shadow: 0px 0px 15px rgba(23, 162, 184, 0.7);
+  transform: scale(1.08);
+}
+
+/* CARD STYLING */
+.meal1, .meal2 {
+  margin-top: 80px;
+  padding-bottom: 60px;
+}
+
+.card {
+  border: none;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: all 0.4s ease;
+  height: 22rem;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  height: 15rem;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 25px rgba(23, 162, 184, 0.4);
+}
+
+.card-body p {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* ORDER NOW SECTION */
+.order-section {
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  padding: 70px 20px;
+  text-align: center;
+  animation: fadeInUp 1.5s ease;
+}
+
+.order-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #007b8f;
+  margin-bottom: 15px;
+}
+
+.order-section p {
+  color: #444;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.order-section form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.order-section input,
+.order-section textarea {
+  padding: 12px 15px;
+  border: 2px solid #17a2b8;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.order-section input:focus,
+.order-section textarea:focus {
+  border-color: #007b8f;
+  box-shadow: 0 0 10px rgba(0, 123, 143, 0.4);
+}
+
+.order-section button {
+  padding: 12px;
+  border: none;
+  background-color: #17a2b8;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.order-section button:hover {
+  background-color: #128090;
+  box-shadow: 0 5px 20px rgba(23, 162, 184, 0.6);
+  transform: translateY(-3px);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .restaurant h1 {
+    font-size: 2.2rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons .btn {
+    width: 80%;
+  }
+
+  .card {
+    height: auto;
+  }
+}
